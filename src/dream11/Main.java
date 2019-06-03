@@ -16,10 +16,10 @@ public class Main {
         team t = new team();
         System.out.println("                                          MATCH IS STARTING....   \n");
 
-//            System.out.println("INADIA TEAM                                                            AUSTRALIA TEAM ");        
-//        for (int j = 0; j < 11; j++) {
-//            System.out.println(t.firstteam[j]+"                                                        "+t.secondteam[j]);
-//        }
+            System.out.println("INADIA TEAM                                                            AUSTRALIA TEAM ");        
+        for (int j = 0; j < 11; j++) {
+            System.out.println(t.firstteam[j]+"                                                        "+t.secondteam[j]);
+        }
         
         
         
