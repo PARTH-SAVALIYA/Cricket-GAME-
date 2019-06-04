@@ -121,12 +121,13 @@ public class IndiaBat extends Thread {
         for (Map.Entry m : map.entrySet()) {
             System.out.println(m.getKey() + " _______________________________________ " + m.getValue());
         }
-        System.out.println("\n\n\n");
+        System.out.println("\n");
         for (Map.Entry m : w_count.entrySet()) {
             System.out.println(m.getKey() + "  - - - - - - - - - - - - - - - - - - " + m.getValue());
         }
         System.out.println("RUN (" + run + ")          " + "EXTRA (" + wide + ")         " + "WICKET (" + wicket + ")");
-
+        System.out.println("\n\n");
+        
         if (Main.toss == 1 && Main.choose == 2 || Main.toss == 2 && Main.choose == 1) {
             if (run < Main.a_run + 1) {
                 System.out.println("******** AUSTRALIA WIN *************");
