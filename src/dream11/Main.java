@@ -22,13 +22,12 @@ public class Main {
         }
         
         
-        
-        toss = i.rendomgenerater(1, 2);
-        choose = i.rendomgenerater(1, 2);
-        switch (1) {
+        toss = i.rendomgenerater(1, 2);;
+        choose = a.rendomgenerater(1, 2);;
+        switch (toss) {
             case 1:
                 System.out.print("India Win The Toss   ");
-                switch (2) {
+                switch (choose) {
                     case 1:
                         System.out.println("And Choose Bat First");
                         i.start();
@@ -47,25 +46,27 @@ public class Main {
                         break;
                 }
                 break;
-//            case 2:
-//                System.out.print("Australia Win The Toss");
-//                switch (choose) {
-//                    case 1:
-//                        System.out.println("And Choose Bat First");
-//                        a.start();
-//                        a.join();
-//                        i.start();
-//                        i.join();
-//                        break;
-//                    case 2:
-//                        System.out.println("And Choose Ball First");
-//                        i.start();
-//                        i.join();
-//                        a.start();
-//                        a.join();
-//                        break;
-//                }
-//                break;
+            case 2:
+                System.out.print("Australia Win The Toss");
+                switch (choose) {
+                    case 1:
+                        System.out.println("And Choose Bat First");
+                        a.start();
+                        a.join();
+                        a_run = a.run;
+                        i.start();
+                        i.join();
+                        break;
+                    case 2:
+                        System.out.println("And Choose Ball First");
+                        i.start();
+                        i.join();
+                        i_run = i.run;
+                        a.start();
+                        a.join();
+                        break;
+                }
+                break;
         }
 
     }

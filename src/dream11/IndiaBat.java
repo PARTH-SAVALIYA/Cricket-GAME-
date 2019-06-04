@@ -10,7 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class IndiaBat extends Thread {
-    
+
     team t = new team();                                        // for playing team
     Random random = new Random();                               // to generate random number
     public int run = 0;                                                // total inning    
@@ -102,10 +102,11 @@ public class IndiaBat extends Thread {
                 bowler[0] = bowler[1];
 
             }
-
-            if (run > Main.a_run + 1) {
-                System.out.println("\n\n ************   INDIA WIN   ************");
-                break;
+            if (Main.toss == 1 && Main.choose == 2 || Main.toss == 2 && Main.choose == 1) {
+                if (run > Main.a_run + 1) {
+                    System.out.println("\n\n ************   INDIA WIN   ************");
+                    break;
+                }
             }
 
         }
@@ -125,11 +126,15 @@ public class IndiaBat extends Thread {
             System.out.println(m.getKey() + "  - - - - - - - - - - - - - - - - - - " + m.getValue());
         }
         System.out.println("RUN (" + run + ")          " + "EXTRA (" + wide + ")         " + "WICKET (" + wicket + ")");
-        if (run < Main.a_run + 1) {
-            System.out.println("******** AUSTRALIA WIN *************");
-        }else if(run == Main.a_run){
-            System.out.println("*********** IT'S DRAW ****************");
+
+        if (Main.toss == 1 && Main.choose == 2 || Main.toss == 2 && Main.choose == 1) {
+            if (run < Main.a_run + 1) {
+                System.out.println("******** AUSTRALIA WIN *************");
+            } else if (run == Main.a_run) {
+                System.out.println("*********** IT'S DRAW ****************");
+            }
         }
+
     }
 
     public void single() throws InterruptedException {

@@ -110,7 +110,7 @@ public class AustraliaBat extends Thread {
 
             }
 
-            if (Main.toss != 1 && Main.choose != 2) {
+            if (Main.toss == 1 && Main.choose == 1 || Main.toss == 2 && Main.choose == 2) {
                 if (run > Main.i_run + 1) {
                     System.out.println("\n\n ************   AUSTRALIA WIN   ************");
                     break;
@@ -135,7 +135,7 @@ public class AustraliaBat extends Thread {
         }
         System.out.println("RUN (" + run + ")          " + "EXTRA (" + wide + ")         " + "WICKET (" + wicket + ")");
 
-        if (Main.toss != 1 && Main.choose != 2) {
+        if (Main.toss == 1 && Main.choose == 1 || Main.toss == 2 && Main.choose == 2) {
             if (run < Main.i_run + 1) {
                 System.out.println("******** INDIA WIN *************");
             } else if (run == Main.i_run) {
